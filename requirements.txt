@@ -1,0 +1,7 @@
+streamlit
+psycopg2-binary
+pandas
+plotly
+feedparser
+python-dateutil
+groq
