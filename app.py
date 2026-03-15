@@ -137,7 +137,7 @@ def parse_google_news_date(entry):
         return None
 
 
-def scrape_company_news(company_name: str, max_items: int = 30):
+def scrape_company_news(company_name: str, max_items: int = 500):
     """
     MVP simple source:
     Google News RSS search by company name.
@@ -454,7 +454,7 @@ if search_clicked or refresh_ai_clicked:
 
         if search_clicked:
             with st.spinner("Mengambil berita dari source terbatas..."):
-                scraped_articles = scrape_company_news(company_name, max_items=30)
+                scraped_articles = scrape_company_news(company_name, max_items=500)
                 inserted_count = save_articles(conn, company_id, scraped_articles)
                 st.success(f"Scraping selesai. Artikel baru tersimpan: {inserted_count}")
 
